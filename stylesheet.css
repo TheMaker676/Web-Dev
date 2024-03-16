@@ -1,0 +1,364 @@
+/** global element styling **/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root{
+  --color-black: #000;
+  --color-white: #fff;
+  --color-ywhite: #fff6e6;
+  --color-blue: #0000ff;
+  --color-lblue: #66b3ff;
+  --color-grey: #333;
+  --color-orange: #ff6600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background-color: var(--color-grey);
+ font-family: 'Lato', sans-serif;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/** global classes styling **/
+/*nav-bar*/
+
+nav {
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  min-height: 10vh;
+  width: 100%;
+  height: 4em;
+  background-color: white;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  background: linear-gradient(to right,#000 50%,#000 ,#0000ff,#66b3ff,#00ffff);
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+ 
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  transition: 0.2s ease-out;
+  background-size: 200%;
+  font-size: 1.2rem;
+  padding: 1.25em;
+}
+
+nav li a:hover {
+  background-position: -100%;
+    cursor: pointer;
+}
+
+.logo > img {
+  left: 1em;
+  width: 8em;
+  height: 6em;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0.5em 0em;
+  position: relative;
+  filter: saturate(300%);
+}
+
+/*page_1*/
+
+.page_1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://media.istockphoto.com/photos/statistics-of-business-concept-marketing-analysis-picture-id1255527254?k=20&m=1255527254&s=612x612&w=0&h=SrYgkcdYo-x2gxK78nQkukgsFWuNjUOV8xf9WKnhdxY=);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: invert(0%);
+}
+
+.page_1 h2 {
+  color: var(--color-ywhite);
+  font-weight: 900;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 0 0 0.125em hsl(30 100% 60% / 0.5), 0 0 0.45em currentColor;
+}
+
+.page_1 h3 {
+  color: var(--color-ywhite);
+  font-weight: 900; 
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page_1 h4 {
+  color: var(--color-ywhite);
+  font-weight: 900; 
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width:768px) { 
+   
+  .page_1 form input[type="email"]{
+    width: 70%;
+    height: 1.8em;
+    background: none;
+    border: 3px solid #66b3ff;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0.25em 5em;
+  }
+  
+  .page_1 form input[type="email"]::placeholder {
+    color: white;
+    text-align: center; 
+  }
+  
+  .page_1 input[type="submit"] {
+    width: 35%;
+    height: 1.4em;
+    border: none;
+    background: white;
+    color: #66b3ff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    position: relative;
+    left: 11em;
+    margin-top: 0.25em;
+    transition: all 0.5s ease-in;
+  }
+  
+  .page_1 input[type="submit"]:hover {
+    background: linear-gradient(185deg, #66b3ff 20%, #fff 50%);
+  color: #ffb366;
+  }
+  
+  .page_1 input[type="submit"]:active {
+    border: 1px solid #66b3ff;
+    color: #ffb84d;
+    transform: scale(1.04);
+  }
+}
+
+/*page_2*/
+
+.grid {
+  display: flex;
+}
+
+.page_2 {
+  width: 100%;
+  height: 24em;
+}
+
+#info {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#info .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.5em;
+  width: 20vw;
+  color: blue;
+}
+
+@media (max-width: 550px) {
+  #info .icon {
+    display: none;
+  }
+}
+
+#info .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 7.5em;
+  width: 100vw;
+  color: #8c8c8c;
+}
+
+#info .desc h2 {
+  color: white;
+}
+
+@media (max-width: 550px) {
+  #info .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 8em;
+  }
+}
+
+/*page_3*/
+
+.page_3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2018/09/27/09/22/web-3706563_960_720.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#teaser {
+  display: flex;
+  justify-content: center;
+}
+
+#teaser > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+/*page_4*/
+
+.page_4 {
+  background-color: #e5e5e5;
+  padding: 0.5em;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  width: calc(100% / 4);
+  margin: 0.5em;
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: grey;
+  background-color: var(--color-black);
+}
+
+.card > .level {
+  background-color: grey;
+  color: white;
+  padding: 1em 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  align-self: normal;
+}
+
+.card > h2 {
+  margin-top: 1em;
+  color: var(--color-blue)
+}
+
+.card > ol {
+  margin: 1em 0;
+}
+
+.card > ol > li {
+  padding: 0.5em 0;
+}
+
+.card > button {
+  border: 0;
+  margin: 1em;
+  background-color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: auto;
+  transition: all 1.5s;
+}
+
+.card > button:hover {
+  background: linear-gradient(60deg,#000, #333, #0000ff );
+  color: var(--color-white);
+}
+
+button {
+  padding: 0.8em 0.5em;
+  background-color: var(--color-black); 
+  border-radius: 22px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  color: grey;
+  z-index: 0;
+  transion: color 0.25s ease-in;
+}
+
+button:focus{
+    outline: 0;
+    background: linear-gradient(60deg,#000, #333, #0000ff );
+  color: var(--color-white);
+  /* color: hsl(222, 100%, 95%); */
+};
+
+footer {
+  padding: 1em;
+  color: blue;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer > ul > li {
+  padding: 0 1em;
+}
+
+footer > ul > li > a {
+  color: blue;
+}
+
+footer > span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  color: #444;
+}
